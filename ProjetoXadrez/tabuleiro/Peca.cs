@@ -9,16 +9,13 @@ namespace tabuleiro
     class Peca
     {
         public Posicao posicao { get; set; }
-
         public CorPeca corPeca { get; protected set; }
-
         public int qtdMovimentos { get; protected set; }
-
         public Tabuleiro tab { get; protected set; }
 
-        public Peca(Posicao posicao, CorPeca corPeca, Tabuleiro tab)
+        public Peca(CorPeca corPeca, Tabuleiro tab)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.corPeca = corPeca;
             this.qtdMovimentos = 0;
             this.tab = tab;
