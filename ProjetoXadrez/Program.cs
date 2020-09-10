@@ -9,25 +9,14 @@ namespace ProjetoXadrez
     {
         static void Main(string[] args)
         {
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
-
-            Console.WriteLine(pos);
-
-            Console.WriteLine(pos.toPosicao()); 
-        }
-    }
-}
-
-    /*
-     * 
             try
             {
                 Tabuleiro tab = new Tabuleiro(8, 8);
 
                 tab.inserirPeca(new Torre(tab, CorPeca.Preta), new Posicao(0, 0));
                 tab.inserirPeca(new Torre(tab, CorPeca.Preta), new Posicao(1, 3));
-                tab.inserirPeca(new Rei(tab, CorPeca.Preta), new Posicao(0, 0));
-
+                tab.inserirPeca(new Rei(tab, CorPeca.Preta), new Posicao(0, 2));
+                tab.inserirPeca(new Torre(tab, CorPeca.Branca), new Posicao(3, 5));
                 Tela.imprimirTabuleiro(tab);
             }
 
@@ -36,4 +25,6 @@ namespace ProjetoXadrez
                 Console.WriteLine(e.Message);
             }
             Console.ReadLine();
-        }*/
+        }
+    }
+    }
