@@ -11,13 +11,9 @@ namespace ProjetoXadrez
         {
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaXadrez partida = new PartidaXadrez();
 
-                tab.inserirPeca(new Torre(tab, CorPeca.Preta), new Posicao(0, 0));
-                tab.inserirPeca(new Torre(tab, CorPeca.Preta), new Posicao(1, 3));
-                tab.inserirPeca(new Rei(tab, CorPeca.Preta), new Posicao(0, 2));
-                tab.inserirPeca(new Torre(tab, CorPeca.Branca), new Posicao(3, 5));
-                Tela.imprimirTabuleiro(tab);
+                Tela.imprimirTabuleiro(partida.tab);
             }
 
             catch (TabuleiroException e)
