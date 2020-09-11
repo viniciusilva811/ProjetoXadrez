@@ -21,11 +21,35 @@ namespace tabuleiro
             this.tab = tab;
         }
 
-        public abstract bool[,] movimentosPossiveis();
-        
-        public void aumentarMovimentos() 
+        public void aumentarMovimentos()
         {
             qtdMovimentos++;
         }
+
+        public bool existeMovimentosPossiveis() 
+        {
+            bool[,] mat = movimentosPossiveis();
+            for (int i = 0; i < tab.linhas; i++) 
+            {
+                for (int j = 0; j< tab.linhas; j++) 
+                {
+                    if (mat[i, j]) 
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool podeMovePara(Posicao pos) 
+        {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
+
+        public abstract bool[,] movimentosPossiveis();
+        
+        
     }
 }
