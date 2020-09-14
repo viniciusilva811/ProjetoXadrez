@@ -8,7 +8,7 @@ namespace xadrez
 {
     class Rei : Peca
     {
-        public Rei(Tabuleiro tab, CorPeca corPeca, PartidaXadrez partida) : base(corPeca, tab)
+        public Rei(Tabuleiro tab, PartidaXadrez partida, CorPeca corPeca ) : base(corPeca, tab)
         {
 
         }
