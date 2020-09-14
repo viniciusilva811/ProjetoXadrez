@@ -1,4 +1,5 @@
 ﻿using ProjetoXadrez.tabuleiro;
+using ProjetoXadrez.xadrez;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -229,19 +230,39 @@ namespace xadrez
 
         private void colocarPecas() 
         {
-            colocarNovaPeca('d', 1, new Rei(tab, CorPeca.Branca));
-            colocarNovaPeca('c', 1, new Torre(tab, CorPeca.Branca));
-            colocarNovaPeca('e', 1, new Torre(tab, CorPeca.Branca));
-            colocarNovaPeca('d', 2, new Torre(tab, CorPeca.Branca));
-            colocarNovaPeca('c', 2, new Torre(tab, CorPeca.Branca));
-            colocarNovaPeca('e', 2, new Torre(tab, CorPeca.Branca));
+            colocarNovaPeca('a', 1, new Torre(tab, CorPeca.Branca));
+            colocarNovaPeca('b', 1, new Cavalo(tab, CorPeca.Branca));
+            colocarNovaPeca('c', 1, new Bispo(tab, CorPeca.Branca));
+            colocarNovaPeca('d', 1, new Dama(tab, CorPeca.Branca));
+            colocarNovaPeca('e', 1, new Rei(tab, CorPeca.Branca, this));
+            colocarNovaPeca('f', 1, new Bispo(tab, CorPeca.Branca));
+            colocarNovaPeca('g', 1, new Cavalo(tab, CorPeca.Branca));
+            colocarNovaPeca('h', 1, new Torre(tab, CorPeca.Branca));
+            colocarNovaPeca('a', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('b', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('c', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('d', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('e', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('f', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('g', 2, new Peao(tab, CorPeca.Branca, this));
+            colocarNovaPeca('h', 2, new Peao(tab, CorPeca.Branca, this));
 
-            colocarNovaPeca('d', 8, new Rei(tab, CorPeca.Preta));
-            colocarNovaPeca('c', 8, new Torre(tab, CorPeca.Preta));
-            colocarNovaPeca('e', 8, new Torre(tab, CorPeca.Preta));
-            colocarNovaPeca('d', 7, new Torre(tab, CorPeca.Preta));
-            colocarNovaPeca('c', 7, new Torre(tab, CorPeca.Preta));
-            colocarNovaPeca('e', 7, new Torre(tab, CorPeca.Preta));
+            colocarNovaPeca('a', 8, new Torre(tab, CorPeca.Preta));
+            colocarNovaPeca('b', 8, new Cavalo(tab, CorPeca.Preta));
+            colocarNovaPeca('c', 8, new Bispo(tab, CorPeca.Preta));
+            colocarNovaPeca('d', 8, new Dama(tab, CorPeca.Preta));
+            colocarNovaPeca('e', 8, new Rei(tab, CorPeca.Preta, this));
+            colocarNovaPeca('f', 8, new Bispo(tab, CorPeca.Preta));
+            colocarNovaPeca('g', 8, new Cavalo(tab, CorPeca.Preta));
+            colocarNovaPeca('h', 8, new Torre(tab, CorPeca.Preta));
+            colocarNovaPeca('a', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('b', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('c', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('d', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('e', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('f', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('g', 7, new Peao(tab, CorPeca.Preta, this));
+            colocarNovaPeca('h', 7, new Peao(tab, CorPeca.Preta, this));
 
         }
     }
