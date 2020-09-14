@@ -9,6 +9,37 @@ namespace ProjetoXadrez
 {
     class Tela
     {
+        public static void imprimirPartida(PartidaXadrez partida) 
+        {
+            imprimirTabuleiro(partida.tab);
+            Console.WriteLine();
+            imprimirPecasCapturadas(partida);
+            Console.WriteLine();
+            Console.WriteLine("Turno: " + partida.turno);
+            Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+        }
+
+        public static void imprimirPecasCapturadas(PartidaXadrez partida) 
+        {
+            Console.WriteLine("Pecas capturadas: ");
+            Console.Write("Brancas.. ");
+            imprimirConjunto(partida.pecasCapturadas(CorPeca.Branca));
+            Console.WriteLine();
+            Console.Write("Pretas.. ");
+            imprimirConjunto(partida.pecasCapturadas(CorPeca.Preta));
+            Console.WriteLine();
+        }
+
+        public static void imprimirConjunto(HashSet<Peca> conjunto) 
+        {
+            Console.Write("[");
+            foreach (Peca x in conjunto) 
+            {
+                Console.Write(x + " ");
+            }
+            Console.Write("]");
+        }
+
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
             for (int i = 0; i < tab.linhas; i++)
@@ -74,7 +105,7 @@ namespace ProjetoXadrez
                 else
                 {
                     ConsoleColor auxiliar = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write(peca);
                     Console.ForegroundColor = auxiliar;
                 }
